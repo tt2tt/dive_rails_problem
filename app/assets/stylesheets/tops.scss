@@ -1,3 +1,51 @@
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+}
+
+.row{
+  height: 100%;
+}
+
+.left{
+  height: 100%;
+  background-image: url('/twitter-667462_1920.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.right{
+  height: 100%;
+  position: relative;
+}
+
+#foreword{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+#start{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.fab{
+  color: #00f;
+  display: block;
+}
