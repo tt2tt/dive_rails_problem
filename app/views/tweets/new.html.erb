@@ -1,0 +1,9 @@
+<h1>Tweetを投稿する</h1>
+
+<%= form_with(model: @tweet, local: true) do |form|%>
+  <div class="tweet">
+    <p><%= form.label :Tweet %></p>
+    <p><%= form.text_field :content %></p>
+  </div>
+  <%= form.submit %>
+<% end %>
