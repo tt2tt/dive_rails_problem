@@ -13,4 +13,15 @@ class TweetsController < ApplicationController
       redirect_to tweets_path
     end
   end
+  
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+  
+  def update
+    @tweet = Tweet.find(params[:id])
+    if @tweet.update(params.require(:tweet).permit(:content))
+      redirect_to tweets_path
+    end
+  end
 end

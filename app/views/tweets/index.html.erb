@@ -1,12 +1,18 @@
-<h1>Tweet一覧</h1>
+<% page = "Tweet一覧" %>
 
-<table>
-  <tr>
-    <th>Tweet</th>
-  </tr>
-  <% @tweets.each do |tweet| %>
-    <tr>
-      <td><%= tweet.content %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="container">
+  <div class="row">
+    <h1><%= page %></h1>
+    <table>
+      <tr>
+        <th>Tweet</th>
+      </tr>
+      <% @tweets.each do |tweet| %>
+        <tr>
+          <td><%= tweet.content %></td>
+          <td><%= link_to 'Tweetを編集する', edit_tweet_path(tweet.id) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
