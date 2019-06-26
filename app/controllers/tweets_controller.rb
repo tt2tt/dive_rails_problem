@@ -24,4 +24,11 @@ class TweetsController < ApplicationController
       redirect_to tweets_path
     end
   end
+  
+  def destroy
+    @tweet = Tweet.find(params[:id])
+    if @tweet.delete
+      redirect_to tweets_path
+    end
+  end
 end
