@@ -6,12 +6,16 @@ body{
   height: 100%;
 }
 
-.container{
+#container{
   height: 100%;
+  width: 100%;
 }
 
 .row{
   height: 100%;
+  padding-top: 58px;
+  padding-bottom: 50px;
+  width: 100%;
 }
 
 .left{
@@ -28,21 +32,21 @@ body{
 }
 
 #foreword{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  top: 30%;
+  font-size: 40px;
+  top: 40%;
   left: 5%;
 }
 
 #start{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  top: 25%;
-  left: 10%;
+  top: 28%;
+  left: 24%;
+}
+
+#start_button{
+  position: absolute;
+  left: 21%;
 }
 
 .fab{
