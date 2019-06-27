@@ -13,6 +13,8 @@ class TweetsController < ApplicationController
      @tweet = Tweet.new(tweet_params)
     if @tweet.save
       redirect_to tweets_path, notice:"Tweetを投稿しました！"
+    else
+      render 'new'
     end
   end
   
@@ -22,6 +24,8 @@ class TweetsController < ApplicationController
   def update
     if @tweet.update(tweet_params)
       redirect_to tweets_path, notice:"Tweetを更新しました！"
+    else
+      render 'edit'
     end
   end
   
