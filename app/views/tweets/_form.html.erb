@@ -5,6 +5,15 @@
     <div class="side col-md-4 visible-md visible-lg">
     </div>
     <div class="middle col-md-4">
+      <% if @tweet.errors.any? %>
+        <div class="alert">
+          <ul>
+            <% @tweet.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
       <% if action_name == "new" %>
       <h1><%= page[0] %></h1>
       <% else %>
