@@ -35,6 +35,10 @@ class TweetsController < ApplicationController
     end
   end
   
+  def confirm
+    @tweet = Tweet.new(tweet_params)
+  end
+  
   private
   
   def tweet_params

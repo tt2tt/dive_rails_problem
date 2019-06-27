@@ -1,9 +1,8 @@
-<% page = ["Tweetを編集する","Tweetを編集する"] %>
+<% page = ["Tweetを投稿する","Tweetを編集する"] %>
 
 <div class="container">
   <div class="row">
-    <div class="side col-md-4 visible-md visible-lg">
-    </div>
+    <%= render 'side' %>
     <div class="middle col-md-4">
       <% if @tweet.errors.any? %>
         <div class="alert">
@@ -15,11 +14,12 @@
         </div>
       <% end %>
       <% if action_name == "new" %>
-      <h1><%= page[0] %></h1>
+        <h1><%= page[0] %></h1>
       <% else %>
-      <h1><%= page[1] %></h1>
+        <h1><%= page[1] %></h1>
       <% end %>
-      <%= form_with(model: @tweet, local: true) do |form|%>
+      
+      <%= form_with(model: @tweet, local: true, url: confirm_tweets_path) do |form|%>
         <div class="tweet">
           <p><%= form.label :Tweet %></p>
           <p><%= form.text_field :content %></p>
@@ -27,7 +27,6 @@
         <%= form.submit %>
       <% end %>
     </div>
-    <div class="side col-md-4 visible-md visible-lg">
-    </div>
+    <%= render 'side' %>
   </div>
 </div>
