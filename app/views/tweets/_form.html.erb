@@ -19,7 +19,7 @@
         <h1><%= page[1] %></h1>
       <% end %>
       
-      <%= form_with(model: @tweet, local: true, url: confirm_tweets_path) do |form|%>
+      <%= form_with(model: @tweet, local: true, url: choose_new_or_edit) do |form|%>
         <div class="tweet">
           <p><%= form.label :Tweet %></p>
           <p><%= form.text_field :content %></p>
