@@ -2,7 +2,9 @@
 
 <div class="container-fluid">
   <div class="row">
+    
     <%= render 'side' %>
+    
     <div class="middle col-md-4">
       <% if @tweet.errors.any? %>
         <div class="alert">
@@ -13,6 +15,7 @@
           </ul>
         </div>
       <% end %>
+      
       <% if action_name == "new" %>
         <h1><%= page[0] %></h1>
       <% else %>
@@ -27,6 +30,8 @@
         <%= form.submit %>
       <% end %>
     </div>
+    
     <%= render 'side' %>
+    
   </div>
 </div>

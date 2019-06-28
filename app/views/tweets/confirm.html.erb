@@ -1,6 +1,8 @@
 <div class="container-fluid">
   <div class="row">
+    
     <%= render 'side' %>
+    
     <div class="middle col-md-4">
       <h3>以下の内容で送信する</h3>
     
@@ -14,7 +16,10 @@
         <%= form.hidden_field :content %>
         <%= form.submit "戻る", name: 'back'  %>
       <% end %>
+      
     </div>
+    
     <%= render 'side' %>
+    
   </div>
 </div>
